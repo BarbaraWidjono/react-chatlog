@@ -3,12 +3,18 @@ import Timestamp from './Timestamp';
 import PropTypes from 'prop-types';
 
 const Message = (props) => {
+
+  let source = "";
+  props.sender === "Vladimir"? source = "local" : source = "remote";
+  let styleClass = `chat-entry ${source}`;
+  console.log(styleClass);
+
   return(
-    <section class="chat-entry">
-      <p class="entry-name">{props.sender}</p>
-      <div class = "entry-bubble">
-        <p class="entry-body">{props.body}</p>
-        <p class="entry-time"><Timestamp time={props.timestamp} /></p>
+    <section className={styleClass}>
+      <p className="entry-name">{props.sender}</p>
+      <div className = "entry-bubble">
+        <p className="entry-body">{props.body}</p>
+        <p className="entry-time"><Timestamp time={props.timestamp} /></p>
       </div>
     </section>
   )

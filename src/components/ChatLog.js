@@ -5,16 +5,17 @@ import PropTypes from 'prop-types';
 const ChatLog = (props) => {
 
   const messages = props.messages.map((message, i) => {
+
     return <Message key={i} sender={message.sender} body={message.body} timestamp={message.timeStamp} />
   })
   return(
-    <section class="chat-log">
+    <section className="chat-log">
       {messages}
     </section>
   );
 }
 
-ChatLog.PropTypes = {
+ChatLog.propTypes = {
   messages: PropTypes.array,
 };
 
