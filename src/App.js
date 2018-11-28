@@ -5,7 +5,7 @@ import chatMessages from './data/messages.json';
 
 class App extends Component {
   render() {
-    console.log(chatMessages);
+    // console.log(chatMessages);
 
     return (
       <div className="App">

@@ -7,7 +7,7 @@ const Message = (props) => {
   let source = "";
   props.sender === "Vladimir"? source = "local" : source = "remote";
   let styleClass = `chat-entry ${source}`;
-  console.log(styleClass);
+  // console.log(styleClass);
 
   return(
     <section className={styleClass}>
